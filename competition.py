@@ -49,8 +49,8 @@ class Competition(object):
             time_cursor = 0.000
             hotdog_cursor = 0.000
             while time_cursor <= self.duration:
-                hotdog_cursor += 1.000
                 time_cursor += self.competitors[name_key](hotdog_cursor)
+                hotdog_cursor += 1.000
 
                 # append Event for all whole hotdogs eaten within the competition duration
                 if time_cursor <= self.duration:
